@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webhook Receiver</title>
+</head>
+<body>
+    <script>
+        // Simple webhook receiver that forwards to main app
+        if (window.opener && window.opener.handleWebhook) {
+            window.opener.handleWebhook('webhook received');
+        }
+        window.close();
+    </script>
+</body>
+</html>
